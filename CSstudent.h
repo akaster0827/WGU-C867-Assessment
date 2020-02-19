@@ -1,8 +1,9 @@
 #pragma once
-#include "degree.h"
 #include "student.h"
+#include "degree.h"
 
-class NetworkStudent : public Student
+
+class CS_Student : public Student
 {
 
 public:
@@ -10,5 +11,5 @@ public:
 	Degree getDegree() override;
 
 private:
-	Degree degree = NETWORKING;
+	Degree degree = COMPUTER_SCIENCE;
 };

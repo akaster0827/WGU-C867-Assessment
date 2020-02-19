@@ -1,1 +1,2 @@
-
+#pragma once
+enum Degree { SECURITY, NETWORKING, SOFTWARE, COMPUTER_SCIENCE };
