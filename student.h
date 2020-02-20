@@ -6,10 +6,10 @@
 #include "degree.h"
 #include <string>
 
-using namespace std;
+using std::string;
 
-#ifndef STUDENT_H
-#define STUDENT_H
+//#ifndef STUDENT_H
+//#define STUDENT_H
 
 class Student {
 public:
@@ -26,7 +26,8 @@ public:
 		, int age
 		, int num_days_in_course[]
 		, Degree degree);
-	      
+	
+	const static int num_days_in_course_ArraySz = 3;
 
 	//destructor
 	~Student();
@@ -41,17 +42,17 @@ public:
 	virtual Degree getDegree() = 0;
 
 	//mutator(setter)
-	void setStudent_id(string studentId);
-	void setFirst_name(string firstName);
-	void setLast_name(string lastName);
-	void setEmail_address(string email);
+	void setStudent_id(string student_id);
+	void setFirst_name(string first_name);
+	void setLast_name(string last_name);
+	void setEmail_address(string email_address);
 	void setAge(int age);
 	void setNum_days_in_course(int num_days_in_course[]);
 	void setDegree(Degree degree);
 
-	//virtual
+	//virtual print
 	virtual void print();
-	virtual Degree getDegree() = 0;
+	
 
 private:
 	//member variables
@@ -62,9 +63,9 @@ private:
 	int age;
 	int* num_days_in_course;
 	Degree degree;
-	const static int num_days_in_course_ArraySz = 3;
+	
 };
 
 
 
-#endif // !STUDENT_H
+//#endif // !STUDENT_H

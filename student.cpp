@@ -1,13 +1,13 @@
 #include "student.h"
 #include <iostream>
 
-using namespace std;
+
 
 /*DEFINITIONS*/
 
 //default constructor
 Student::Student()
-	: student_id(), first_name(), last_name(), email_address(), age(), num_days_in_course(new int[num_days_in_course_ArraySz])
+	: student_id(""), first_name(""), last_name(""), email_address(""), age(-1), num_days_in_course(new int[num_days_in_course_ArraySz])
 {
 	for (int i = 0; i < num_days_in_course_ArraySz; ++i) {
 		this->num_days_in_course[i] = 0;
@@ -62,19 +62,19 @@ Degree Student::getDegree() {
 
 
 //mutator(setter)
-void Student::setStudent_id(string studentId) {
+void Student::setStudent_id(string student_id) {
 	this->student_id = student_id;
 }
 
-void Student::setFirst_name(string firstName) {
+void Student::setFirst_name(string first_name) {
 	this->first_name = first_name;
 }
 
-void Student::setLast_name(string lastName) {
+void Student::setLast_name(string last_name) {
 	this->last_name = last_name;
 }
 
-void Student::setEmail_address(string email) {
+void Student::setEmail_address(string email_address) {
 	this->email_address = email_address;
 }
 
@@ -94,13 +94,13 @@ void Student::setDegree(Degree degree) {
 
 //virtual print
 void Student::print() {
-	cout << getStudent_id();
-	cout << "\tFirst name: " << getFirst_name();
-	cout << "\tLast name: " << getLast_name();
-	cout << "\tAge: " << getAge();
+	std::cout << getStudent_id();
+	std::cout << "\tFirst name: " << getFirst_name();
+	std::cout << "\tLast name: " << getLast_name();
+	std::cout << "\tAge: " << getAge();
 
 	int* days = getNum_days_in_course();
-	cout << "\t  Days in course: " << days[0] << ", " << days[1] << ", " << days[2];
+	std::cout << "\t  Days in course: " << days[0] << ", " << days[1] << ", " << days[2];
 
 	string degree_Str = "";
 	
@@ -118,5 +118,5 @@ void Student::print() {
 		degree_Str = "COMPUTER_SCIENCE";
 		break;
 	}
-	cout << "\tDegree: " << degree_Str << endl;
+	std::cout << "\tDegree: " << degree_Str << std::endl;
 }

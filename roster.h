@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
 #include "degree.h"
-#include "student.h"
-using namespace std;
+//#include "student.h"
+using std::string;
 
 const string studentData[] =
 {
